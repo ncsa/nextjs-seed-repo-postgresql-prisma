@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Seed Repo for NCSA Web Projects
+
+## Technologies
+
+- [TypeScript](https://www.typescriptlang.org/)
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [ESLint](https://eslint.org/)
+  - [TypeScript ESLint](https://typescript-eslint.io/)
+- [Prettier](https://prettier.io/)
+- [Jest](https://jestjs.io/)
+  - TODO: Add DOM testing library
 
 ## Getting Started
 
-First, run the development server:
+After cloning the repository, install the dependencies:
+
+```bash
+npm install
+```
+
+To start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+## Fonts
+
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Code Style
 
-To learn more about Next.js, take a look at the following resources:
+This project uses both ESLint and Prettier to enforce code style. You can run the linter with:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run lint
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+You can run style checks with:
 
-## Deploy on Vercel
+```bash
+npm run style:check
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Or automatically fix style issues with:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+npm run style:fix
+```
+
+It is also recommended to update your editor settings to automatically format your code on save. Refer to the [Prettier documentation](https://prettier.io/docs/en/editors.html) for more information.
+
+TODO: Consider whether to introduce Husky and Lint-Staged for pre-commit hooks
+
+## Testing
+
+This project uses Jest for testing. You can run the tests with:
+
+```bash
+npm run test
+```
+
+TODO: Add instructions for snapshot testing
+
+## Docker
+
+TODO: Add Dockerfile and docker-compose.yml
+
+## Deployment
+
+TODO: Add deployment instructions
+
+## Commit Messages
+
+This project uses [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for commit messages. It is recommended to check this documentation before making a commit.
