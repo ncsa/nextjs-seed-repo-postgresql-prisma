@@ -1,19 +1,19 @@
-{
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "project": true
+/** @type {import("eslint").Linter.Config} */
+const config = {
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    project: true
   },
-  "plugins": [
+  plugins: [
     "@typescript-eslint"
   ],
-  "extends": [
-    "eslint:recommended",
+  extends: [
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended-type-checked",
     "plugin:@typescript-eslint/stylistic-type-checked",
     "prettier"
   ],
-  "rules": {
+  rules: {
     "@typescript-eslint/array-type": "off",
     "@typescript-eslint/consistent-type-definitions": "off",
     "@typescript-eslint/consistent-type-imports": [
@@ -39,5 +39,6 @@
       }
     ]
   },
-  "root": true
+  root: true
 }
+export default config;
