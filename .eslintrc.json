@@ -3,9 +3,7 @@
   "parserOptions": {
     "project": true
   },
-  "plugins": [
-    "@typescript-eslint"
-  ],
+  "plugins": ["@typescript-eslint"],
   "extends": [
     "eslint:recommended",
     "next/core-web-vitals",

@@ -2,16 +2,14 @@
 const config = {
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    project: true
+    project: true,
   },
-  plugins: [
-    "@typescript-eslint"
-  ],
+  plugins: ["@typescript-eslint"],
   extends: [
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended-type-checked",
     "plugin:@typescript-eslint/stylistic-type-checked",
-    "prettier"
+    "prettier",
   ],
   rules: {
     "@typescript-eslint/array-type": "off",
@@ -19,26 +17,26 @@ const config = {
     "@typescript-eslint/consistent-type-imports": [
       "warn",
       {
-        "prefer": "type-imports",
-        "fixStyle": "inline-type-imports"
-      }
+        prefer: "type-imports",
+        fixStyle: "inline-type-imports",
+      },
     ],
     "@typescript-eslint/no-unused-vars": [
       "warn",
       {
-        "argsIgnorePattern": "^_"
-      }
+        argsIgnorePattern: "^_",
+      },
     ],
     "@typescript-eslint/require-await": "off",
     "@typescript-eslint/no-misused-promises": [
       "error",
       {
-        "checksVoidReturn": {
-          "attributes": false
-        }
-      }
-    ]
+        checksVoidReturn: {
+          attributes: false,
+        },
+      },
+    ],
   },
-  root: true
-}
+  root: true,
+};
 export default config;
