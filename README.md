@@ -65,7 +65,21 @@ This project uses Jest for testing. You can run the tests with:
 npm run test
 ```
 
-TODO: Add instructions for snapshot testing
+Run the tests and generate coverage report
+
+```bash
+npm run test:cov
+```
+
+Update snapshots
+
+```bash
+npm run test -- -u
+```
+
+## CI pipeline
+
+The [pipeline](.github/workflows/ci.yaml) automatically builds the project, runs tests, and checks code quality on every push or pull request to the main branch. Key steps include installing dependencies, building the project, running tests, and performing linting and style checks.
 
 ## Docker
 
