@@ -10,8 +10,12 @@
 - [Prettier](https://prettier.io/)
 - [Jest](https://jestjs.io/)
   - TODO: Add DOM testing library
+- [Docker](https://www.docker.com/)
+  - [Docker Compose](https://docs.docker.com/compose/)
 
 ## Getting Started
+
+Make sure you have Node.js Version 20 installed.
 
 After cloning the repository, install the dependencies:
 
@@ -83,7 +87,13 @@ The [pipeline](.github/workflows/ci.yaml) automatically builds the project, runs
 
 ## Docker
 
-TODO: Add Dockerfile and docker-compose.yml
+This project uses Docker to create and containerize a production build.
+
+To build and run the application, use:
+
+```bash
+docker compose up
+```
 
 ## Deployment
 
