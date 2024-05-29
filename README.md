@@ -17,16 +17,16 @@
 
 Make sure you have Node.js Version 20 installed.
 
-After cloning the repository, install the dependencies:
+This project uses [bun](https://bun.sh) as package manager. After cloning the repository, install the dependencies:
 
 ```bash
-npm install
+bun install
 ```
 
 To start the development server:
 
 ```bash
-npm run dev
+bun run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -42,19 +42,19 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 This project uses both ESLint and Prettier to enforce code style. You can run the linter with:
 
 ```bash
-npm run lint
+bun run lint
 ```
 
 You can run style checks with:
 
 ```bash
-npm run style:check
+bun run style:check
 ```
 
 Or automatically fix style issues with:
 
 ```bash
-npm run style:fix
+bun run style:fix
 ```
 
 It is also recommended to update your editor settings to automatically format your code on save. Refer to the [Prettier documentation](https://prettier.io/docs/en/editors.html) for more information.
@@ -66,19 +66,19 @@ TODO: Consider whether to introduce Husky and Lint-Staged for pre-commit hooks
 This project uses Jest for testing. You can run the tests with:
 
 ```bash
-npm run test
+bun run test
 ```
 
 Run the tests and generate coverage report
 
 ```bash
-npm run test:cov
+bun run test:cov
 ```
 
 Update snapshots
 
 ```bash
-npm run test -- -u
+bun run test -- -u
 ```
 
 ## CI pipeline
