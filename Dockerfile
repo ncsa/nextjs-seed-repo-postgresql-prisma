@@ -15,7 +15,11 @@ FROM base AS prerelease
 COPY --from=install /temp/prod/node_modules node_modules
 COPY . .
 
+# generate prisma client
+RUN bun prisma generate
+
 # build
+ENV NEXT_TELEMETRY_DISABLED 1
 ENV NODE_ENV=production
 RUN bun run build
 
