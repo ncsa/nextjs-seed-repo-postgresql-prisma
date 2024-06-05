@@ -5,6 +5,8 @@
 - [TypeScript](https://www.typescriptlang.org/)
 - [Next.js](https://nextjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [Prisma] (https://www.prisma.io/)
+- [PostgreSQL] (https://www.postgresql.org/)
 - [ESLint](https://eslint.org/)
   - [TypeScript ESLint](https://typescript-eslint.io/)
 - [Prettier](https://prettier.io/)
@@ -36,6 +38,34 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 ## Fonts
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Database
+
+This project uses [`prisma`](https://www.prisma.io/) as database ORM. Below are some handy commands to simplify database management using Prisma.
+
+After making any changes to the schema, run the following command to generate the Prisma Client:
+
+```bash
+bun prisma generate
+```
+
+To push the current state of your database schema to the database, use:
+
+```bash
+bun prisma db push
+```
+
+To apply any pending migrations and ensure your database schema matches your code, run:
+
+```bash
+bun prisma migrate
+```
+
+To launch Prisma Studio, an interactive interface for managing your database, viewing and editing data, and running queries, use:
+
+```bash
+bun prisma studio
+```
 
 ## Code Style
 
@@ -87,12 +117,18 @@ The [pipeline](.github/workflows/ci.yaml) automatically builds the project, runs
 
 ## Docker
 
-This project uses Docker to create and containerize a production build.
+To run a local development database, use:
+
+```bash
+docker compose up
+```
+
+This project also uses Docker to create and containerize a production build.
 
 To build and run the application, use:
 
 ```bash
-docker compose up
+docker compose -f docker-compose-prod.yml up
 ```
 
 ## Deployment
